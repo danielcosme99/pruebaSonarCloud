@@ -1,0 +1,24 @@
+{
+  "sintomas": [
+    { "s1": "Dolor en el pecho" },
+    { "s2": "Fiebre alta" },
+    { "s3": "Sudoración nocturna" },
+    { "s4": "Cansancio extremo" },
+    { "s5": "Perdida de apetito" },
+    { "s6": "Perdida de peso" },
+    { "s7": "Fiebre baja" },
+    { "s8": "Fatiga" },
+    { "s9": "Dolor de cabeza" },
+    { "s10": "Escalofrios" },
+    { "s11": "Dolor abdominal" },
+    { "s12": "Tos mas de 3 meses" },
+    { "s13": "Tos con flema" },
+    { "s14": "Dificultad para respirar" },
+    { "s15": "Sudoración" },
+    { "s16": "Tos cronica" },
+    { "s17": "Perdida de peso" },
+    { "s18": "Dolor en las articulaciones" },
+    { "s19": "Sensación de presión en el pecho" },
+    { "s20": "Tos norma" }
+  ]
+}
