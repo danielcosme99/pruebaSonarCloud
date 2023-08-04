@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                slackSend(color: '#BADA55', message: 'Start Buil¿')
+                slackSend(color: '#BADA55', message: 'Start Buil')
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh
+                sh 'exit 1'
             }
         }
         stage('Deploy') {
