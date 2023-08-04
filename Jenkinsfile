@@ -20,9 +20,16 @@ pipeline {
     }
     post {
         success {
-            slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            //slackSend color: '#BADA55', message: 'GAAAAAAAA'
+            slackSend(
+                message: "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            )
+            slackSend(color: '#BADA55', message: 'GAAAAAAAA')
+        }
+        failure {
+            slackSend(
+                failOnError: true,
+                message: "Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            )
         }
     }
 }
-
