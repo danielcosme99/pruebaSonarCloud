@@ -11,10 +11,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'//sonarqube
-                script {
-                    def scannerHome = tool 'SonarQubeScanner' // Asegúrate de tener configurado el SonarQubeScanner en la sección de "Global Tool Configuration"
-                    //sh "${scannerHome}/bin/sonar-scanner"
-                }
             }
         }
         stage('Deploy') {
