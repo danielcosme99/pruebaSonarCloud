@@ -18,6 +18,12 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage("speak") {
+            steps{
+                slackSend color: '#BADA55', message: 'Hello, World!'
+            }
+        }
+}
         post {
             success {
                 slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
