@@ -28,9 +28,9 @@ pipeline {
         }
         failure {
             slackSend(
-                failOnError: true,
-                message: "Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                message: "Build deployed dail - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
             )
+            slackSend(color: '#BADA55', message: 'GAAAAAAAA triste')
         }
     }
 }
