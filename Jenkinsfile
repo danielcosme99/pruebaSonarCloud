@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh
+                slackSend(color: '#BADA55', message: 'Start Buil¿')
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh
             }
         }
         stage('Deploy') {
@@ -27,8 +28,10 @@ pipeline {
             slackSend(color: '#BADA55', message: 'GAAAAAAAA')
         }
         failure {
-            
-            slackSend(color: '#BADA55', message: 'GAAAAAAAA triste')
+            slackSend(
+                failOnError: true,
+                message: "Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            )
         }
     }
 }
