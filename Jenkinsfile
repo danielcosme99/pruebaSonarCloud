@@ -27,9 +27,7 @@ pipeline {
             slackSend(color: '#BADA55', message: 'GAAAAAAAA')
         }
         failure {
-            slackSend(
-                message: "Build deployed dail - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            )
+            
             slackSend(color: '#BADA55', message: 'GAAAAAAAA triste')
         }
     }
