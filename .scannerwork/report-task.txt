@@ -1,6 +1,6 @@
-projectKey=Prueba-SI
+projectKey=danielcosme99_pruebaSonarCloud
 serverUrl=http://localhost:9000
 serverVersion=10.1.0.73491
-dashboardUrl=http://localhost:9000/dashboard?id=Prueba-SI
-ceTaskId=AYm4trcQEwkt6336w-sG
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYm4trcQEwkt6336w-sG
+dashboardUrl=http://localhost:9000/dashboard?id=danielcosme99_pruebaSonarCloud
+ceTaskId=AYnC4e_tmMm_eu0AWx7G
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYnC4e_tmMm_eu0AWx7G
