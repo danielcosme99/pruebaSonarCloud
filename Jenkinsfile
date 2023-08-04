@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'//sonarqube
-                bat ""D:\Aplicaciones\SonarQube\sonar-scanner-5.0.0.2966-windows\bin\sonar-scanner.bat\""
+                bat 'D:\Aplicaciones\SonarQube\sonar-scanner-5.0.0.2966-windows\bin\sonar-scanner.bat'
             }
         }
         stage('Deploy') {
