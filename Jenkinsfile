@@ -21,7 +21,7 @@ pipeline {
     post {
         success {
             slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            slackSend color: '#BADA55', message: 'GAAAAAAAA'
+            //slackSend color: '#BADA55', message: 'GAAAAAAAA'
         }
     }
 }
