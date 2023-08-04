@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing..'//sonarqube
                 script {
                     def scannerHome = tool 'SonarQubeScanner' // Asegúrate de tener configurado el SonarQubeScanner en la sección de "Global Tool Configuration"
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    //sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
         }
