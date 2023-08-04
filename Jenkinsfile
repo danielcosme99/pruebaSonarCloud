@@ -1,4 +1,3 @@
-// Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
 
@@ -18,17 +17,15 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+    }
+    post {
+        success {
+            slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            slackSend color: '#BADA55', message: 'GAAAAAAAA'
         }
-        post {
-            success {
-                slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-                slackSend color: '#BADA55', message: 'GAAAAAAAA'
-            }
-        }
-        post {
-            failure {
-                slackSend failOnError:true message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            }
+        failure {
+            slackSend failOnError:true message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
     }
 }
+
